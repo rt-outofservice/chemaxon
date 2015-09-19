@@ -6,7 +6,7 @@ include ParseFiles
 def parse_weather(file, exp)
   resHsh = Hash.new
   fileArrParsed = get_parsed_array(file, exp)
-  fileArrParsed.each_index {|x| resHsh[fileArrParsed[x][0].to_i] = fileArrParsed[x][2].to_i - fileArrParsed[x][2].to_i}
+  fileArrParsed.each_index {|x| resHsh[fileArrParsed[x][0].to_i] = fileArrParsed[x][1].to_i - fileArrParsed[x][2].to_i}
 
   return min_hash_value(resHsh)[0]
 end
